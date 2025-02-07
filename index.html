@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: black;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Rock Paper Scissors</h1>
+    <button class="button" onclick="rock()"><img src="icon-rock.svg" alt=""></button>
+    <button class="button" onclick="paper()"><img src="icon-paper.svg" alt=""></button>
+    <button class="button" onclick="scissor()"><img src="icon-scissors.svg" alt=""></button>
+</div>
+    <script>
+        function rock() {
+            let value = Math.floor(Math.random() * 3);
+            let r=0;
+            if(value == 0) {
+                alert("It's a tie! You both chose rock.");
+            } else if(value == 1) {
+                alert("You lose! The computer chose paper.");
+            } else {
+                alert("You win! The computer chose scissors.");
+            }
+        }
+        function paper() {
+            let value = Math.floor(Math.random() * 3);
+            let p =1;
+            if(value == 0) {
+                alert("You win! The computer chose rock.");
+            } else if(value == 1) {
+                alert("It's a tie! You both chose paper.");
+            } else {
+                alert("You lose! The computer chose scissors.");
+            }
+
+        }
+        function scissor() {
+            let value = Math.floor(Math.random() * 3);
+            let s =2;
+            if(value == 0) {
+                alert("You lose! The computer chose rock.");
+            } else if(value == 1) {
+                alert("You win! The computer chose paper.");
+            } else {
+                alert("It's a tie! You both chose scissors.");
+            }
+        }
+    </script>
+    
+
+
+</body>
+</html>
